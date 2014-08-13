@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Image Box App</title>
+  <link rel="stylesheet" href={% static 'css/index.css'%}>
+</head>
+
+<body >
+{% verbatim %}
+    <div ng-app="myApp">
+    <header>
+    <div class="container">
+      <ul>
+        <li><a href="#/">Home</a></li>
+      </ul>
+    </div>
+    </header>
+
+    <div class='container' ng-view></div>
+    </div>
+{% endverbatim %}
+
+
+  <footer>
+    <div class='container'>
+      Winnie's Little Image Box
+    </div>
+  </footer>
+
+  <!-- ANGULAR -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.min.js"></script>
+
+  <!-- Custom -->
+  <script src="{% static 'js/app.js' %}"></script>
+
+</body>
+</html>

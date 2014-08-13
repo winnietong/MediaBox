@@ -1,0 +1,15 @@
+<h1>My Images</h1>
+<hr>
+
+<!--
+<div class='filterBox'>
+	<span style="float:right; display: block;">Filter: <input type="text" ng-model="myFilter"></span>
+</div>
+-->
+
+<div class="container-box" ng-repeat="image in images track by $index">
+    <img src='{{image.url}}'>
+    <h3>{{ image.title }}</h3>
+    <button ng-click="delete_image(image.resource_uri)">Delete Image</button>
+    <button ng-click="update_image(image.resource_uri)">Update Image</button>
+</div>
